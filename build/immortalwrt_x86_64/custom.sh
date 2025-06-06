@@ -8,7 +8,7 @@
 cat feeds.conf.default
 
 # 添加第三方软件包
-git clone https://github.com/db-one/dbone-packages.git -b 23.05 package/dbone-packages
+git clone https://github.com/aoxijy/dbone-packages.git -b 23.05 package/dbone-packages
 
 # 更新并安装源
 # ./scripts/feeds clean
@@ -225,11 +225,16 @@ cat >> .config <<EOF
 # CONFIG_PACKAGE_luci-app-oaf=y #应用过滤
 CONFIG_PACKAGE_luci-app-openclash=y #OpenClash客户端
 CONFIG_PACKAGE_luci-app-mihomo=y #mihomo 客户端
-CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
+CONFIG_PACKAGE_luci-app-serverchan=n #微信推送
+CONFIG_PACKAGE_luci-app-ddns-go=y #DDNS解析
+CONFIG_PACKAGE_luci-app-tailscale=y #组网
+CONFIG_PACKAGE_luci-app-easytier=y #组网
+CONFIG_PACKAGE_luci-app-easyupdate=y #组网
+CONFIG_PACKAGE_luci-app-homeproxy=y #homeproxy
 # CONFIG_PACKAGE_luci-app-eqos=y #IP限速
 # CONFIG_PACKAGE_luci-app-control-weburl=y #网址过滤
-# CONFIG_PACKAGE_luci-app-smartdns=y #smartdns服务器
-# CONFIG_PACKAGE_luci-app-adguardhome=y #ADguardhome
+# CONFIG_PACKAGE_luci-app-smartdns=n #smartdns服务器
+# CONFIG_PACKAGE_luci-app-adguardhome=n #ADguardhome
 CONFIG_PACKAGE_luci-app-poweroff=y #关机（增加关机功能）
 # CONFIG_PACKAGE_luci-app-argon-config=y #argon主题设置
 # CONFIG_PACKAGE_luci-app-autotimeset=y #定时重启系统，网络
@@ -292,7 +297,7 @@ CONFIG_PACKAGE_luci-app-wireguard=n #wireguard端
 #
 # VPN相关插件(禁用):
 #
-CONFIG_PACKAGE_luci-app-v2ray-server=y #V2ray服务器
+CONFIG_PACKAGE_luci-app-v2ray-server=n #V2ray服务器
 CONFIG_PACKAGE_luci-app-ipsec-vpnd=n #ipsec VPN服务
 CONFIG_PACKAGE_luci-app-openvpn-server=n #openvpn服务
 CONFIG_PACKAGE_luci-app-softethervpn=n #SoftEtherVPN服务器
