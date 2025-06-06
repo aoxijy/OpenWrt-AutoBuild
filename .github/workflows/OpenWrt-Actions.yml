@@ -19,8 +19,6 @@ on:
         type: choice
         default: immortalwrt_x86_64
         options:
-          - Lean_x86_64
-          - Lean_x86_64_Long
           - immortalwrt_x86_64
 
       CACHE_BUILD:
