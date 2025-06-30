@@ -6,7 +6,8 @@
 
 # 更新feeds文件
 cat feeds.conf.default
-
+# Easytier
+git clone --depth 1 -b main https://github.com/EasyTier/luci-app-easytier.git package/dbone-packages
 # 添加第三方软件包
 git clone https://github.com/db-one/dbone-packages.git -b 23.05 package/dbone-packages
 
